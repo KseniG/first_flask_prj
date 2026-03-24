@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+<body>
+    <header>
+        <h1>{{site_name}}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+        </nav>
+    </header>
+{% block content %}
+{% endblock %}
+
+<footer>
+    @{{year}} My Flask App
+</footer>
+</body>
+</html>

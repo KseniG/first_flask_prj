@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>{{ title }} - flask_site</title>
+    </head>
+    <body>
+        <h1>Hello, {{ user.username }}!</h1>
+
+    </body>
+</html>
+
+
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Flask_site</title>
+      {% else %}
+      <title>Привет на сайте</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Site: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hi, {{ user.username }}!</h1>
+  {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+  {% endfor %}
+{% endblock %}
+
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hi, {{ user.username }}!</h1>
+  {% for student in  students %}
+    <div><p>{{ student.name}} grade: <b>{{ student.grade }}</b></p></div>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hi, {{ user.username }}!</h1>
+  {% for student in students %}
+    <div>
+      <p>
+        <span>{{ student.name }}</span>
+        grade: <b class="
+          {% if student.grade == 2 %}grade-2
+          {% elif student.grade == 3 %}grade-3
+          {% elif student.grade == 4 %}grade-4
+          {% elif student.grade == 5 %}grade-5
+          {% else %}default-grade
+          {% endif %}
+        ">{{ student.grade }}</b>
+      </p>
+    </div>
+  {% endfor %}
+{% endblock %}

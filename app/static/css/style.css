@@ -1,0 +1,16 @@
+/* Стили для оценки, если используется класс */
+.grade-2 {
+    color: red;
+}
+.grade-3 {
+    color: yellow;
+}
+.grade-4 {
+    color: lightgreen;
+}
+.grade-5 {
+    color: green;
+}
+.default-grade {
+    color: black;
+}
