@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hi, {{ user.username }}!</h1>
+  <table class="products-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price (USD)</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for prod in products %}
+      <tr>
+        <td>{{ prod.product }}</td>
+        <td class="{% if prod.price < price_threshold %}price-low{% endif %}">
+          ${{ prod.price }}
+        </td>
+        <td>
+          {% if prod.in_stock %}
+            <span style="color: green;">✔ In stock</span>
+          {% else %}
+            <span style="color: red;">✘ Out of stock</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
