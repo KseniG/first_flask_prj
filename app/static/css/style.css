@@ -64,3 +64,65 @@
     color: red;
     font-weight: bold;
 }
+
+/* ===== Стили для новостей ===== */
+.news-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.news-table th, .news-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.news-table th {
+    background-color: #f2f2f2;
+}
+.popular-news {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* ===== Стили для блога ===== */
+.posts-list {
+    list-style: none;
+    padding: 0;
+}
+.posts-list li {
+    margin: 10px 0;
+}
+.posts-list a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #2980b9;
+}
+.posts-list a:hover {
+    text-decoration: underline;
+}
+.post-content {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #3498db;
+    line-height: 1.6;
+}
+
+/* ===== Стили для репозиториев ===== */
+.repos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.repos-table th, .repos-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.repos-table th {
+    background-color: #f2f2f2;
+}
+.popular-repo {
+    color: #f1c40f;
+    font-weight: bold;
+}

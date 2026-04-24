@@ -7,8 +7,14 @@
     <header>
         <h1>{{site_name}}</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href=/products>Products</a>
+            <nav>
+    <a href="/">Home</a>
+    <a href="/products">Products</a>
+    <a href="/news">News</a>          <!-- главная новостей -->
+    <a href="/news/list">News list</a> <!-- список новостей -->
+    <a href="/posts">Blog</a>         <!-- список статей -->
+    <a href="/repos">Repos</a>        <!-- репозитории -->
+</nav>
         </nav>
     </header>
 {% block content %}

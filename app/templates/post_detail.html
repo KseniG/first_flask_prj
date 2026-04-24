@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<div class="post-content">
+    <p>{{ post.content }}</p>
+</div>
+<p><a href="{{ url_for('posts_list') }}">← Назад к списку статей</a></p>
+{% endblock %}

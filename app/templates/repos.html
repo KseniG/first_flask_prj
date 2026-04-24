@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Список репозиториев</h1>
+<p>Всего репозиториев: <strong>{{ total_repos }}</strong></p>
+<table class="repos-table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Язык</th>
+            <th>Звёзд</th>
+            <th>Статус</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for repo in repos %}
+        <tr>
+            <td>{{ repo.name }}</td>
+            <td>{{ repo.language }}</td>
+            <td>{{ repo.stars }}</td>
+            <td>
+                {% if repo.stars > stars_threshold %}
+                <span class="popular-repo">⭐ Популярный репозиторий</span>
+                {% else %}
+                —
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Список новостей</h1>
+<table class="news-table">
+    <thead>
+        <tr>
+            <th>Заголовок</th>
+            <th>Просмотры</th>
+            <th>Популярность</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in news %}
+        <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.views }}</td>
+            <td>
+                {% if item.views > 1000 %}
+                <span class="popular-news">🔥 Популярное</span>
+                {% else %}
+                —
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p><a href="{{ url_for('news_home') }}">← На главную новостей</a></p>
+{% endblock %}
